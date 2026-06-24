@@ -11,7 +11,14 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.matapli3.proyectonewtonraphson.ProyectoNewtonRaphson</exec.mainClass>
     </properties>
-    
+    <dependencies>
+        <!-- Parser matemático mXparser -->
+        <dependency>
+            <groupId>org.mariuszgromada.math</groupId>
+            <artifactId>MathParser.org-mXparser</artifactId>
+            <version>5.0.5</version>
+        </dependency>
+    </dependencies>
     <build> 
         <pluginManagement>
             <plugins>
