@@ -36,7 +36,8 @@
 
             <Separator style="-fx-background-color: #45475a;"/>
 
-            <Button fx:id="btnCalcular" text="Calcular" onAction="#calcular" maxWidth="Infinity"
+            <!-- Botón Calcular con defaultButton="true" -->
+            <Button fx:id="btnCalcular" text="Calcular" onAction="#calcular" defaultButton="true" maxWidth="Infinity"
                     style="-fx-background-color: #40b486; -fx-text-fill: #1e1e2e; -fx-font-weight: bold; -fx-font-size: 14; -fx-background-radius: 6; -fx-cursor: hand;"/>
 
             <Button fx:id="btnLimpiar" text="Limpiar" onAction="#limpiar" maxWidth="Infinity"

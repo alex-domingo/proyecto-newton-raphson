@@ -42,3 +42,12 @@
 .table-view .placeholder .label {
     -fx-text-fill: #45475a;
 }
+
+.table-row-cell.fila-raiz {
+    -fx-background-color: #2d4f43;
+}
+
+.table-row-cell.fila-raiz .table-cell {
+    -fx-text-fill: #a6e3a1;
+    -fx-font-weight: bold;
+}

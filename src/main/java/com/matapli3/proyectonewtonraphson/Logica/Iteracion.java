@@ -1,20 +1,21 @@
 package com.matapli3.proyectonewtonraphson.Logica;
 
 public class Iteracion {
-    public int numero;
-    public double xi;
-    public double fx;
-    public double fpx;
-    public double xiNext;
-    public double delta;
 
-    public Iteracion(int numero, double xi, double fx, double fpx, double xiNext) {
+    public final int numero;
+    public final double xi;
+    public final double fx;
+    public final double fpx;
+    public final double xiNext;
+    public final double delta;
+
+    public Iteracion(int numero, double xi, double fx, double fpx, double xiNext, double delta) {
         this.numero = numero;
         this.xi = xi;
         this.fx = fx;
         this.fpx = fpx;
         this.xiNext = xiNext;
-        this.delta = Math.abs((xiNext - xi)/xiNext);
+        this.delta = delta;
     }
 
     @Override

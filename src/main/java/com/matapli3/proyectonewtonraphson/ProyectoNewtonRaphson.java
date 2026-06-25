@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 package com.matapli3.proyectonewtonraphson;
 
 import com.matapli3.proyectonewtonraphson.Logica.Iteracion;
 import com.matapli3.proyectonewtonraphson.Logica.NewtonRaphson;
-import java.util.List;
+import com.matapli3.proyectonewtonraphson.Logica.Resultado;
 import java.util.Scanner;
 
-/**
- *
- * @author Ludvi
- */
 public class ProyectoNewtonRaphson {
 
     public static void main(String[] args) {
@@ -30,23 +23,18 @@ public class ProyectoNewtonRaphson {
         System.out.print("Ingrese número máximo de iteraciones: ");
         int maxIter = sc.nextInt();
 
-        // Mostrar derivada
-        System.out.println("La derivada calculada automáticamente es: " +
-                NewtonRaphson.getDerivada(funcion));
+        System.out.println("La derivada calculada automáticamente es: "
+                + NewtonRaphson.getDerivada(funcion));
 
-        // Resolver
-        List<Iteracion> pasos = NewtonRaphson.solve(funcion, x0, tol, maxIter);
+        Resultado resultado = NewtonRaphson.solve(funcion, x0, tol, maxIter);
 
-        // Imprimir pasos
-        for (Iteracion it : pasos) {
+        for (Iteracion it : resultado.getPasos()) {
             System.out.println(it);
         }
 
-        // Mostrar raíz aproximada
-        if (NewtonRaphson.converge()) {
-            System.out.printf("La raíz aproximada es: %.6f%n", pasos.get(pasos.size() - 1).xiNext);
-        } else {
-            System.out.println("No fue posible encontrar una raíz con el método de Newton-Raphson.");
+        System.out.println(resultado.getEstado().getMensaje());
+        if (resultado.convergio()) {
+            System.out.printf("La raíz aproximada es: %.6f%n", resultado.getRaiz());
         }
     }
 }
