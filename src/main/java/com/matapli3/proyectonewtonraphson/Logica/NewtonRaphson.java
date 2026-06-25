@@ -1,6 +1,6 @@
 package com.matapli3.proyectonewtonraphson.Logica;
 
-import com.sun.jdi.connect.Connector;
+
 import org.mariuszgromada.math.mxparser.*;
 import java.util.ArrayList;
 import java.util.List;
